@@ -10,12 +10,12 @@
 		<version>13.0.3</version>
 	</parent>
 
-	<groupId>org.openconfig</groupId>
-	<artifactId>openconfig</artifactId>
-	<version>2022.07.09</version>
+	<groupId>openconfig.net</groupId>
+	<artifactId>openconfig-java-bindings</artifactId>
+	<version>4.1.0</version>
 
 	<name>OpenConfig</name>
 	<url>http://openconfig.net</url>
 
-	<description>Network models</description>
+	<description>Openconfig Java Bindings</description>
 </project>
