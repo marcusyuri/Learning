@@ -567,6 +567,12 @@ submodule openconfig-network-instance-l2 {
                     "Reference to producer list key";
                 }
 
+                container state {
+                  config false;
+                  description "State container for L2RIB MAC Table Entries";
+                  // uses l2ni-l2rib-common-producer-state;
+                  // uses l2ni-l2rib-mac-table-producer-state;
+                }
               }
             }
           }
@@ -622,6 +628,12 @@ submodule openconfig-network-instance-l2 {
                   }
                   description
                     "Reference to producer list key";
+                }
+
+                container state {
+                  config false;
+                  description "State container for L2RIB MAC Table Entries";
+                  // uses l2ni-l2rib-common-producer-state;
                 }
               }
             }
