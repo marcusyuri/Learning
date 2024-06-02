@@ -6,7 +6,6 @@ module openconfig-metadata {
   prefix "oc-metadata";
 
   import openconfig-extensions { prefix oc-ext; }
-  import ietf-yang-metadata { prefix ietf-md; }
 
   organization
     "OpenConfig working group";
@@ -27,7 +26,41 @@ module openconfig-metadata {
     reference "0.1.0";
   }
 
-  ietf-md:annotation protobuf-metadata {
+  extension annotation {
+    argument name;
+    description
+      "This extension allows for defining metadata annotations in
+       YANG modules. The 'md:annotation' statement can appear only at
+       the top level of a YANG module.
+
+       The argument of the 'md:annotation' statement defines the name
+       of the annotation. Syntactically it is a YANG identifier as
+       defined in RFC 6020bis, sec. 6.2.
+
+       An annotation defined with this extension statement inherits
+       the namespace and other context from the YANG module in which
+       it is defined.
+
+       Data type of the annotation value is specified in the same way
+       as for a leaf data node using the 'type' statement.
+
+       Semantics of the annotation and other documentation can be
+       specified using the following standard YANG substatements (all
+       are optional): 'description', 'if-feature', 'reference',
+       'status', and 'units'.
+
+       A server announces support for a particular annotation by
+       including the module in which the annotation is defined among
+       the advertised YANG modules (e.g., in NETCONF hello message or
+       yang-library). The annotation then can be attached to any
+       instance of data node defined in any YANG module that is
+       advertised by the server.
+
+       XML and JSON encoding of annotations is defined in
+       RFC XXXX.";
+  }
+
+  oc-metadata:annotation protobuf-metadata {
     type binary {
       length "0..1048000";
     }
