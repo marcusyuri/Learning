@@ -18,4 +18,11 @@
 	<url>http://openconfig.net</url>
 
 	<description>Openconfig Java Bindings</description>
+	<dependencies>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 </project>
