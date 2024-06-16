@@ -25,7 +25,7 @@ class NetworkInstanceTest {
 
 	@Test
 	void testGetInterfaces() {
-		NetworkInstance n = new NetworkInstance();
+		NetworkInstance n = new NetworkInstance(); 
 
 		Map<InterfaceKey, Interface> interfaces = n.getInterfaces().getInterface();
 		Interface iface = interfaces.get(new InterfaceKey("g0/0/0"));
